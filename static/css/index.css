@@ -138,9 +138,8 @@
   position: relative;
   overflow: hidden;
   height: 650px; /* Adjust height as needed */
-  z-index: 3;
 }
-.main-content .parallax-container .parallax-image {
+.main-content .parallax-image {
   position: absolute;
   top: 0;
   left: 0;
@@ -149,8 +148,9 @@
   background-image: url("/static/img/clients.png"); /* Replace 'your-image.jpg' with your image path */
   background-size: cover;
   background-position: center;
+  z-index: 1;
 }
-.main-content .parallax-container .parallax-image .parallax-text {
+.main-content .parallax-image .parallax-text {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -158,11 +158,11 @@
   text-align: center;
   color: white; /* Adjust text color */
 }
-.main-content .parallax-container .parallax-image .parallax-text h1 {
+.main-content .parallax-image .parallax-text h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 90px;
 }
-.main-content .parallax-container .parallax-image .parallax-text h2 {
+.main-content .parallax-image .parallax-text h2 {
   font-family: "Courgette", sans-serif;
   font-size: 90px;
   color: #DFFC5C;
