@@ -15,7 +15,7 @@ body{
 .main-section {
   padding-inline: 60px;
   //height: 100%;
-  width: 100%;
+  //width: 100%;
 }
 
 .header {
@@ -26,6 +26,7 @@ body{
   background-color: white;
   align-items: center;
   justify-content: space-between;
+ 
   
 }
 
@@ -33,10 +34,7 @@ body{
   scale: 0.8;
 }
 
-.header-first{
-  display: flex;
-  align-items: center;
-}
+
 
 .nav-arrow {
   display: flex;
@@ -52,13 +50,14 @@ body{
 .nav-arrow p {
   font-family: "Courgette", cursive;
   margin-left: 10px;
-  font-size: 20px;
+  //font-size: 20px;
 }
 
 .menu-ham {
   display: flex;
  //margin-left: 76.5%;
- //margin-left: auto;
+  margin-left: auto;
+
 }
 
 .menu-ham h3 {
@@ -66,6 +65,18 @@ body{
   padding-right: 6px;
   font-weight: 300;
   font-size: 18px;
+}
+.media-style{
+  display: none;
+  background-color: #EFEFEF;
+  border-radius: 50%;
+  padding-inline: 0px;
+  padding: 2px;
+  height: 35px;
+   width: 40px;
+   margin-left: auto;
+ 
+  
 }
 
 .hero-section {
@@ -255,11 +266,12 @@ video{
 
   .what-components{
     display: flex;
-     width: 75%;
+    width: 75%;
+   
 
     min-height: 300px;
    // padding-block: 20px;
-    padding-right: 60px;
+   // padding-right: 60px;
     background: linear-gradient(#E85CDA, #11BBF1);
   
     
@@ -273,7 +285,8 @@ video{
     .what-we-do-text{
       position: absolute;
       z-index: 2;
-      //top: 40px;
+   
+     
       left: -100px;
 
       
@@ -289,7 +302,7 @@ video{
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-left: 160px;
+      padding-left: 190px;
        
       gap: 170px;
       
@@ -327,8 +340,10 @@ video{
  .projections{
   display:flex;
   //gap: 50px;
-  flex-wrap: wrap;
- 
+  
+ .respon-text{
+  display: flex;
+ }
   
 
   h1{
@@ -354,8 +369,7 @@ video{
  }
  .numbers{
   display: flex;
-  flex-wrap: wrap;
-  gap: 150px;
+  gap: 130px;
   padding-top: 60px;
 
   .numbers-text{
@@ -390,7 +404,7 @@ video{
   //background-color: #E85CDA;
   padding-left: 280px;
   position: relative;
-  top: -380px;
+  top: -350px;
   font-family: "Montserrat", sans-serif;
 
    .arrows{
@@ -398,7 +412,7 @@ video{
     gap: 8px;
     cursor: pointer;
     position: absolute;
-    right: 70px;
+     right: 70px;
    
     .next{
       border-radius: 50%;
@@ -426,15 +440,16 @@ video{
     display: flex;
     gap: 150px;
     padding-top: 70px;
-    flex-wrap: wrap;
+
+    img{
+      max-width: 100%
+    }
   }
   .projects-text{
-    display: flex;
-    gap: 250px;
+   
     text-align: center;
-    padding-left: 30px;
-    padding-top: 40px;
-    flex-wrap: wrap;
+    padding-top: 10px;
+    
     
     h2{
       font-weight: 400;
@@ -456,7 +471,7 @@ video{
   display: flex;
   gap: 170px;
   align-items: center;
-  flex-wrap: wrap;
+  
 
 }
  h1{
@@ -491,9 +506,12 @@ video{
   padding-inline: 15px;
   padding-block: 15px;
   background-color: white;
+  max-width: 100%;
+  margin-top: 80px;
 }
 p{
   font-family: "Montserrat", sans-serif;
+  color: black;
 }
 .icons{
   display: flex;
@@ -643,8 +661,64 @@ p{
     .about-content {
       padding-left: 300px; /* Reduce padding on smaller screens */
     }
+
+   video{
+    top: -400px;
+   }
+   .what-we-do{
+    top: -550px;
+   }
+
+   .projections-container{
+    top: -250px;
+    padding-left: 180px;
+   
+   }
+
+   .projections{
+   
+    p{
+      padding-left: 200px;
+      padding-right: 10px;
+      
+    }
+
+   }
+
+   .numbers{
+    gap: 70px;
   }
   
+  .our-projects{
+    top: 50px;
+    padding-left: 120px;
+  
+  .images{
+    gap: 50px;
+    padding-right: 20px;
+  
+  }
+
+
+  }
+  .contact-us{
+   padding-left: 120px;
+    padding-right: 20px;
+    top: 250px;
+    .contactus-content{
+     gap: 90px;
+    }
+  }
+  .footer{
+    margin-top: 200px;
+    padding: 70px;
+    padding-bottom: 15px;
+
+    
+   
+   }
+}
+
 }
 
 @media (max-width: 1470px) {
@@ -653,6 +727,22 @@ p{
     .about-content {
       padding-left: 200px; /* Reduce padding on smaller screens */
     }
+    .projections-container{
+      padding-left: 150px;
+     
+     }
+  
+     .numbers{
+      gap: 28px;
+     // scale: 0.9;
+      padding-right: 20px;
+     }
+
+     .contact-us{
+      .contactus-content{
+       gap: 80px;
+      }
+     }
   }
   
 }
@@ -678,11 +768,13 @@ p{
     .about-content {
       padding-left: 100px; /* Reduce padding on smaller screens */
     }
+
+  
   }
   
 }
 
-@media (max-width: 1130px) {
+@media (max-width: 1140px) {
 
   .main-content{
     .about-content {
@@ -694,6 +786,8 @@ p{
      padding-bottom: 10px;
      }
     }
+
+    
   }
   
 }
@@ -719,24 +813,167 @@ p{
       position: absolute;
       z-index: 1;
       background-color: transparent;
-      padding-top: 10px;
-      padding-inline: 20px;
+      //padding-top: 10px;
+      padding-inline: 10px;
     }
   }
 
+   .menu-ham{
+    display: none;
+  }
+
   .media-style{
-    background-color: #EFEFEF;
-    border-radius: 50%;
-    padding-block: 8px;
-    padding-inline: 2px;
+    //display: inline-block;
+    align-items: center;
+    display: flex;
+
+   }
+  .burger{
+    scale: 0.6;
+  }
+
+  .main-content{
+
+  .what-we-do{
+    top: -250px;
+    padding-top: 40px;
+
+    .what-components{
+      width: 100% !important;
+      min-height: 230px;
+      display: flex;
+      flex-wrap: wrap;
+      flex-shrink: 1;
+      .component-container{
+        flex-shrink: 1;
+        .single-component{
+         scale: 0.7;
+        }
+         }
+    .what-we-do-text{
+      top: -103px;
+      left: 40px;
+      
+      
+    }
+    h1{
+      font-size: 70px;
+      line-height: 65px;
+    }
+    }
+   }
+   .projections-container{
+    top: -80px;
+    padding-left: 90px;
+   
+   }
+
+   .projections{
+   
+    p{
+      padding-left: 100px;
+      padding-right: 10px;
+      font-size: 20px;
+      line-height: 30px;
+      padding-top: 40px;
+      
+    }
+
+    h1{
+      font-size: 70px;
+    }
+    h2{
+      font-size: 30px;
+    }
+    .medal{
+      width: 60px;
+      height: 68px;
+    }
+   }
+   .numbers{
+   
+   
+   h3{
+    font-size: 70px;
+   }
+   p{
+    font-size: 25px;
+   }
+   span{
+    font-size: 25px;
+   }
+  }
+
+  .our-projects{
+    padding-left: 25px !important;
+
+    h1{
+      font-size: 70px;
+      line-height: 70px;
+    }
+    .projects-text{
+      h2{
+        font-size: 18px;
+      }
+    }
+
+   
+
+    .arrows{
+      scale: 0.9;
+    }
+  }
+
+  .contact-us{
+    padding-left: 25px !important;
+
     
   }
-  
+}
 }
 
+@media (max-width:1170px) {
+  .main-content{
+  .projections-container{
+    padding-left: 25px;
+  }
+    .numbers{
+      gap: 20px;
+    }
 
+    .contact-us{
+      padding-left: 90px;
+     
+      .contactus-content{
+        gap: 30px !important;
+      }
+      h1{
+        font-size: 60px;
+      }
+      h2{
+        font-size: 20px;
+      }
+      p{
+       font-size: 20px;
+      }
+
+      span{
+        font-size: 20px;
+      }
+     }
+}
+}
 
 @media (max-width: 900px) {
+
+  .main-section{
+    .text-section{
+    .header{
+      scale: 0.8;
+     
+    }
+  }
+  }
   .parallax-container{
    .parallax-image{
      .parallax-text{
@@ -744,12 +981,13 @@ p{
        text-align: start;
       h2{
         font-size: 70px;
-        
       }
        }
       
      }
+   
    }
+   
   }
 
 
@@ -769,8 +1007,317 @@ p{
  
    .main-content{
      .about-content {
-       padding-left: 100px; /* Reduce padding on smaller screens */
+       padding-left: 38px; /* Reduce padding on smaller screens */
+       padding-right: 10px;
+
+       .about-us{
+        p{
+          font-size: 70px;
+        } 
+       }
+       h4{
+        font-size: 24px;
+       }
+       .text{
+        h5{
+          font-size: 24px;
+        }
+          .writing{
+            line-height: 22px;
+            p{
+             font-size: 18px;
+            }
+          }
+        
+      }
+
      }
+
+   
+    
+     
    }
    
  }
+
+ @media (max-width:580px) {
+
+  .main-content{
+    video{
+     top: -150px  !important;
+     scale: 0.9;
+      
+     }
+  
+  
+  .parallax-container{
+    height: 400px;
+    .parallax-image{
+
+      height: 300px;
+     .parallax-text{
+      //left: 40%;
+      h1{
+        font-size: 60px;
+      }
+      h2{
+        font-size: 30px;
+      }
+     }
+    }
+   }
+
+   .what-we-do{
+    top: -60px;
+   }
+
+   
+   .projections-container{
+    top: 70px;
+    scale: 0.9;
+    padding-left: 10px;
+   }
+  .projections{
+ 
+    display: flex;
+    flex-direction: column;
+   p{
+    padding-left: 4px !important;
+   }
+
+   h1{
+    font-size: 60px;
+   }
+  }
+  .numbers{
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap into multiple rows */
+      justify-content: space-between; 
+      
+  
+      .numbers-text{
+        flex-basis: calc(50% - 10px); /* Set the width of each item to half minus the margin */
+        margin: 5px;
+        
+  
+  
+      }
+    }
+    .our-projects{
+      scale: 0.9;
+      padding-left: 5px;
+      top: 150px;
+
+      .arrows{
+        scale: 0.7;
+        right: 10px;
+      }
+    }
+  }
+}
+
+ @media (max-width: 850px) {
+  .main-content {
+    video {
+      scale: 0.9;
+      top: -300px;
+    }
+
+    .what-we-do {
+      .what-components {
+        display: flex !important;
+        flex-wrap: wrap !important; /* Allow items to wrap onto multiple lines */
+       
+        /* Center the items horizontally */
+       // align-items: flex-start; /* Align items to the start of the cross axis */
+       flex-shrink: 1 !important;
+      }
+
+      .component-container {
+        padding-left: 0px !important;
+       
+        gap: 60px !important;
+        flex-shrink: 1 !important; /* Allow items to shrink */
+      }
+    }
+  .projections{
+    p{
+      padding-left: 50px;
+    }
+  }
+  .numbers{
+  display: flex;
+    flex-wrap: wrap;
+
+    .numbers-text{
+      flex-direction: row;
+      
+    }
+    }
+   .contact-us{
+   padding-top: 15px;
+   padding-bottom: 20px;
+    .contactus-content{
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+    }
+    h1{
+      font-size: 42px;
+    }
+
+    p{
+      font-size: 15px;
+    }
+
+    span{
+      font-size: 18px;
+    }
+   }
+  }
+}
+
+  
+
+
+@media (max-width: 1690px) {
+  .main-content{
+   .what-we-do{
+    .what-components{
+      //width: fit-content;
+      .component-container{
+     gap: 120px;
+     padding-left: 100px;
+     padding-right: 20px;
+      }
+    }
+    
+   }
+  }
+  
+}
+
+@media (max-width: 1360px) {
+  .main-content{
+   .what-we-do{
+    .what-components{
+     width: fit-content;
+      .component-container{
+          gap: 80px; 
+          padding-left: 100px;
+          padding-right: 20px;
+        
+    
+      }
+    }
+    
+   }
+   .contact-us{
+    .contactus-content{
+      gap: 50px;
+    }
+   }
+  }
+  
+}
+
+@media (max-width:638px) {
+  .main-content{
+    .what-we-do{
+      .what-components{
+        .component-container{
+          padding-right: 0;
+          gap: 0px !important;
+         
+        }
+      }
+    }
+    .footer{
+      padding-left: 10px;
+      padding-right: 10px;
+      
+      
+      
+    }
+  }
+ 
+  
+}
+
+@media (max-width:470px) {
+  .main-content{
+    .what-we-do{
+      .what-components{
+       .what-we-do-text{
+        top: -70px;
+        left: 20px;
+       }
+        h1{
+          font-size: 50px;
+          line-height: 40px;
+          
+        }
+        .component-container{
+     position: relative;
+     right: 94px !important;
+        
+          scale: 0.6 !important;
+          
+         
+        }
+      }
+    }
+
+    .our-projects{
+
+      .arrows{
+        scale: 0.7;
+        left: 280px;
+        //top: 250px
+      }
+      .images{
+      flex-wrap: wrap;
+      //justify-content: center;
+       img{
+        width: 200px;
+       }
+      }
+    }
+ .footer{
+ padding-right: 5px;
+ background-color: #DFFC5C;
+ }
+    p{
+      font-size: 12px;
+    }
+    .icons{
+      scale: 0.6;
+      gap: 18px;
+    }
+  }
+  
+}
+
+
+@media (max-width:638px) {
+  .main-content{
+    .what-we-do{
+      .what-components{
+        min-height: 100px;
+         
+        
+        .component-container{
+          padding-right: 0;
+          gap: 40px !important;
+          scale: 0.7;
+         
+         
+        }
+      }
+    }
+  }
+  
+}
+   
+   

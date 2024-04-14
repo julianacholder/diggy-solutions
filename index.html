@@ -11,25 +11,33 @@
 <body>
   <div class="main-section">
   <section class="header">
-    <div class="header-first">
       <img src="logo.png" alt="" class="logo">
       <div class="nav-arrow">
       <img src="pointer.png" alt="">
       <p>Home</p>
      </div>
-    </div>
+   
    
    <div class="menu-ham">
    <h3>Menu</h3>
-   <div class="media-style">
    <label class="burger" for="burger" onclick="openNav()" onclick="closeNav()" >
     <input type="checkbox" id="burger" />
     <span></span>
     <span></span>
     <span></span>
   </label>
-</div>
+  
   </div>
+
+  <!--Responsive design menu-->
+  <div class="media-style">
+    <label class="burger" for="burger" onclick="openNav()" onclick="closeNav()" >
+     <input type="checkbox" id="burger" />
+     <span></span>
+     <span></span>
+     <span></span>
+   </label>
+ </div>
      <div  id="myNav" class="overlay">
 
   <!-- Button to close the overlay navigation -->
@@ -87,14 +95,14 @@
  
 
    
-   <!-- <video autoplay loop muted>
+   <video autoplay loop muted>
       <source src="laptop.mp4" type="video/mp4">
     
       Your browser does not support the video tag.
     </video>
 
 
-    <section class="what-we-do">
+   <section class="what-we-do">
         <div class="what-components">
           <div class="what-we-do-text">
             <img src="Line.png" alt="">
@@ -121,18 +129,23 @@
         </div>
         </div>
 
-    </section>
+    </section> 
 
     <section class="projections-container">
-      <div class="projections">
+      <div class ="projections">
+        <div class="respon-text">
         <div class="projections-header">
           <img src="Line.png" alt="">
           <h1>Projections</h1>
           <h2>2026</h2>
           </div>
-          <img src="medal.png" alt="" class="medal">
+         
+          <div> <img src="medal.png" alt="" class="medal"></div>
+        </div>
+          <div class="responsive-text">
           <p>We’re proud to take part in our <br>
             client sucesss</p>
+          </div>
         </div>
 
         <div class="numbers">
@@ -178,33 +191,30 @@
       <div class="images">
         <div class="mySlides fade">
           <img src="business.png" alt="Business Consultancy">
+          <div class="projects-text">
+            <img src="green line.png" alt="">
+            <h2>Business Consultancy</h2>
+          </div>
         </div>
   
         <div class="mySlides fade">
           <img src="pos system.png" alt="Business Consultancy">
+          <div class="projects-text">
+          <img src="black line.png" alt="">
+          <h2>Pos System</h2>
+        </div>
         </div>
   
         <div class="mySlides fade">
           <img src="service utility.png" alt="Business Consultancy">
-        </div>
-  
-      </div>
-  
-      <div class="projects-text">
-        <div>
-          <img src="green line.png" alt="">
-          <h2>Business Consultancy</h2>
-        </div>
-  
-        <div>
-          <img src="black line.png" alt="">
-          <h2>Pos System</h2>
-        </div>
-  
-        <div class="service-utility">
+          <div class="projects-text">
           <img src="green line.png" alt="">
           <h2>Service Utility App</h2>
+        </div>
+        </div>
+  
       </div>
+  
     </section>
 
     <section class="contact-us">
@@ -227,7 +237,7 @@
       </div>
     </section>
 
-    <section class="footer">
+   <div class="footer">
      <p>@ Copyright Diggy Solutions Ltd.</p>
 
      <div class="icons">
@@ -236,8 +246,8 @@
      <a href=""><img src="linkedin.png" alt=""></a>
       <a href=""><img src="twitter.png" alt=""></a>
      </div>
-    </section> 
-  </div> -->
+    </div>
+  </div> 
 </div>
   </div>
   <script src="https://kit.fontawesome.com/e8c284217e.js" crossorigin="anonymous"></script>
