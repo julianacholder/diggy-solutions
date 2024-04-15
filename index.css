@@ -8,6 +8,10 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
 }
@@ -78,6 +82,48 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding-left: 80px;
+}
+.hero-section .text-content h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 180px;
+  font-weight: 300;
+  margin: 0 0 20px;
+}
+.hero-section .text-content .matters {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.hero-section .text-content h1 {
+  margin: 0;
+  overflow: hidden;
+}
+.hero-section .text-content h1 span {
+  display: none;
+}
+.hero-section .text-content h1 span.text-in {
+  display: block;
+  animation: textIn 0.5s ease;
+}
+.hero-section .text-content h1 span.text-out {
+  animation: textOut 0.5s ease;
+}
+@keyframes textIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+@keyframes textOut {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 .hero-section .text-content h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -86,17 +132,17 @@ body {
   line-height: 190px;
 }
 .hero-section .text-content h1 span {
-  color: white;
+  color: #DFFC5C;
 }
-.hero-section .text-content a {
+.hero-section a {
   text-decoration: none;
   color: black;
-  padding-top: 15px;
+  padding-top: 650px;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   letter-spacing: 5px;
   font-size: 18px;
-  padding-left: 700px;
+  padding-right: 90px;
 }
 
 .main-content {

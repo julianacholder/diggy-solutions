@@ -1,0 +1,49 @@
+.about-us p {
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+.about-us #animated-image {
+  transition: 0.5s;
+  transform-origin: left;
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.about-us p[data-scroll=in] {
+  transform: scaleX(1);
+  transition-delay: 0s;
+}
+
+.about-us #animated-image[data-scroll=in] {
+  transform: scaleX(1);
+  transition-delay: 0s;
+  opacity: 1;
+}
+
+text h4 {
+  transition: 0.5s;
+  transform-origin: right;
+  transform: scaleX(0);
+}
+text h5 {
+  transition: 0.5s;
+  transform-origin: left;
+  transform: scaleX(0);
+}
+text .writing p {
+  transition: 0.5s; /* Added opacity transition */
+  transform-origin: left;
+  transform: scaleX(0);
+}
+
+.text h4 [data-scroll=in] {
+  transform: scaleX(1);
+  transition-delay: 0s;
+}
+
+.about-us #animated-image[data-scroll=in] {
+  transform: scaleX(1);
+  transition-delay: 0s;
+  opacity: 1;
+}/*# sourceMappingURL=animations.css.map */

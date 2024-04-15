@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-o+RDcXx1Xs7xx3pXqKlXF2hqVl5+6K5JoB0TFLnE+44yJ9uKmsy3F3Bi5z5BsxQr" crossorigin="anonymous">
   <!-- Your CSS -->
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="animations.css">
   <title>Diggy Solutions</title>
 </head>
 <body>
@@ -58,14 +59,26 @@
 
   <section class="hero-section">
     <div class="text-content">
-    <h1><span>Your </span> <br>Dreams Matters</h1>
-    <a  href=""><img src="arrow.png" alt=""> <span> PLAY SHOW REEL</span></a>
-  </div>
+   
+      <div><h1>Your    </h1></div>
+      <div class="matters">
+       <h1 class="animate-text">
+      <span>Dreams</span>
+      <span>Missions</span>
+      <span>Goals</span>
+      <span>Aspirations</span>
+  </h1>
+
+  
+  <h1>Matters</h1></div>
+</div>
+ <a  href=""><img src="arrow.png" alt=""> <span> PLAY SHOW REEL</span></a> 
    </section>
   <div class="main-content">
-   <section class="about-content">
-    <div class="about-us">
-      <img src="Line.png" alt="">
+   <section class="about-content" id="animated-text">
+    
+    <div class="about-us" >
+      <img id="animated-image" src="Line.png" alt="">
       <p>About Us</p>
     </div>
       <div class="text">
@@ -252,6 +265,12 @@
   </div>
   <script src="https://kit.fontawesome.com/e8c284217e.js" crossorigin="anonymous"></script>
   <script src="test.js"></script>
+  <script src="scroll-out.js"></script>
+  <script type="text/javascript">
+    ScrollOut({
+      targets: 'p,img,h4,h5,h1,button'
+    })
+  </script>
   
 </body>
 </html>
