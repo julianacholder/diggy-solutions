@@ -101,7 +101,7 @@
         <h1>WE Champion</h1>
         <h2>the bold to achieve the</h2>
         <h1>extraordinary</h1>
-      </div>
+      </div> 
     </div>
    
   
@@ -110,12 +110,13 @@
     
  
 
-   
-   <video autoplay loop muted>
+   <div class="container reveal">
+   <video autoplay loop muted id="animate-video" >
       <source src="laptop.mp4" type="video/mp4">
     
       Your browser does not support the video tag.
     </video>
+  </div>
 
 
    <section class="what-we-do">
@@ -156,6 +157,7 @@
           <h2>2026</h2>
           </div>
          
+   
           <div> <img src="medal.png" alt="" class="medal"></div>
         </div>
           <div class="responsive-text">
@@ -164,38 +166,43 @@
           </div>
         </div>
 
-        <div class="numbers">
-          <div class="numbers-text">
-          <h3>34</h3>
+
+        <div id="number-container">
+          <span id="changing-number"></span>
+       
+        <div class="numbers" id="section_counter">
+          <div class="numbers-text counter-item">
+            <h3 class="counter" data-target="34">10</h3>
           <div>
             <p>Business</p>
             <span>Partners</span>
           </div>
           </div>
-          <div class="numbers-text">
-            <h3>40</h3>
+          <div class="numbers-text counter-item">
+            <h3 class="counter" data-target="40">10</h3>
             <div>
               <p>Skilled</p>
               <span>Employees</span>
             </div>
             </div>
-            <div class="numbers-text">
-              <h3>150</h3>
+            <div class="numbers-text counter-item">
+              <h3 class="counter" data-target="150">10</h3>
               <div>
                 <p>it</p>
                 <span>Projects</span>
               </div>
               </div>
-              <div class="numbers-text">
-                <h3>50</h3>
+              <div class="numbers-text counter-item">
+                <h3 class="counter" data-target="50">10</h3>
                 <div>
                   <p>Mobi</p>
                   <span>Awards</span>
                 </div>
                 </div>
         </div>
+      </div>
     </section>
-    <section class="our-projects">
+    <section class="our-projects reveal">
       <img src="Line.png" alt="">
       <h1>Explore <br> our <br>projects</h1>
 
@@ -271,7 +278,7 @@
   <script src="scroll-out.js"></script>
   <script type="text/javascript">
     ScrollOut({
-      targets: 'p,img,h4,h5,h1,button'
+      targets: 'p,img,h4,h5,h1,button,h2,div'
     })
   </script>
   

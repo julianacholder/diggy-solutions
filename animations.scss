@@ -1,4 +1,38 @@
 
+.reveal{
+  position: relative;
+  transform: translateY(250px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+.counter-item {
+  transition: all 0.5s ease-in-out;
+  transform: translateY(6rem);
+}
+
+.counter-item:hover {
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(6rem);
+  }
+  100% {
+    transform: translateY(0rem);
+  }
+}
+
+ 
+ 
  .about-us{
   p{
     transition: 0.5s;
@@ -12,7 +46,98 @@
     transform: scaleX(0);
   }
  }
+
+ .text {
+ h4 {
+  transition: transform 0.5s ease; 
+  transform-origin: right; 
+  transform: scaleX(0);
+}
+  h5 {
+    transition: 0.5s; 
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+  .writing {
+    p {
+      transition:transform 1s ease-in-out; /* Transition only the transform property */
+      transform-origin: bottom; /* Set transform-origin to bottom for upward slide */
+      transform: translateY(100%); /* Start with the text translated downwards (equivalent to scaleY(0)) */
+    }
+  }
+  button{
+    transition:transform 1s ease-in-out; /* Transition only the transform property */
+      transform-origin: bottom; /* Set transform-origin to bottom for upward slide */
+      transform: translateY(100%); 
+  }
+}
+
+.parallax-container{
+  .parallax-image{
+      .parallax-text{
+        h1, h2{
+        transition:transform 0.5s ease-in-out; /* Transition only the transform property */
+        transform-origin: bottom; /* Set transform-origin to bottom for upward slide */
+        transform: translateY(100%);
+        }
+    }
+  }
+}
+
+.what-we-do{
+  div{
+    transition: transform 0.5s ease; 
+  transform-origin: right; 
+  transform: scaleX(0);
+  }
+}
+
+.respon-text{
+  div{
+    transition: transform 0.5s ease; 
+  transform-origin: left; 
+  transform: scaleX(0);
+  }
+}
+
+.responsive-text{
+  p{
+    transition: transform 0.5s ease; 
+  transform-origin: right; 
+  transform: scaleX(0);
+  }
+}
+
+.images{
+  div{
+    transition: transform 0.5s ease; 
+  transform-origin: right; 
+  transform: scaleX(0);
+  }
+}
+
+.contactus-content{
+  div{
+    transition: transform 0.5s ease; 
+  transform-origin: right; 
+  transform: scaleX(0);
+  }
+}
+
+.contact-us{
+  img{
+    transition: transform 0.5s ease; 
+  transform-origin: left; 
+  transform: scaleX(0);
+  }
+}
+
+
   
+ .text .writing p[data-scroll="in"] {
+  transform: scaleX(1);
+  transition-delay: 0s;
+ }
  .about-us p[data-scroll="in"] {
   transform: scaleX(1);
   transition-delay: 0s;
@@ -24,36 +149,64 @@
   opacity: 1;
  }
 
- 
-  text{
-    h4 {
-      transition: 0.5s;
-      transform-origin: ;
-      transform: scaleX(0);
-    }
-    h5 {
-      transition: 0.5s; 
-      transform-origin: left;
-      transform: scaleX(0);
-    }
-    .writing {
-      p {
-        transition:0.5s; /* Added opacity transition */
-        transform-origin: left;
-        transform: scaleX(0);
-      }
-    }
-  }
-
-
-
-  .text h4 [data-scroll="in"]{
-   transform: scaleX(1);
-   transition-delay: 0s;
- }
-
- .about-us #animated-image[data-scroll="in"] {
+ .text h4[data-scroll="in"] {
   transform: scaleX(1);
-  transition-delay: 0s;
-  opacity: 1;
+  transition-delay: 0.5s;
+
  }
+ .text h5[data-scroll="in"] {
+  transform: scaleX(1);
+  transition-delay: 0.5s;
+
+ }
+
+
+ .parallax-container .parallax-image .parallax-text h1[data-scroll="in"] {
+    transform: translateY(0);
+    transition-delay: 0s;
+   }
+
+   .parallax-container .parallax-image .parallax-text h2[data-scroll="in"] {
+    transform: translateY(0);
+    transition-delay: 0s;
+   }
+
+ 
+
+   .what-we-do div[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }
+  
+
+
+   .respon-text div[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }
+  
+   .responsive-text p[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }
+  
+   .images div[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }
+
+   .contactus-content div[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }
+
+   .contact-us img[data-scroll="in"] {
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  
+   }

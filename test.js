@@ -48,6 +48,62 @@ setTimeout(function(){
 
 window.onload=animateText;
 
+function reveal() {
+  var reveals = document.querySelectorAll(".reveal");
+
+  for (var i = 0; i < reveals.length; i++) {
+    var windowHeight = window.innerHeight;
+    var elementTop = reveals[i].getBoundingClientRect().top;
+    var elementVisible = 150;
+
+    if (elementTop < windowHeight - elementVisible) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", reveal);
+
+let counters = document.querySelectorAll(".counter-item .counter");
+
+// Function to update counter and apply animation
+function updateCounterAndAnimate() {
+  let speed = 200;
+  counters.forEach((counter, index) => {
+    function updateCounter() {
+      const targetNumber = +counter.dataset.target;
+      const initialNumber = +counter.innerText;
+      const incPerCount = targetNumber / speed;
+      if (initialNumber < targetNumber) {
+        counter.innerText = Math.ceil(initialNumber + incPerCount);
+        setTimeout(updateCounter, 40);
+      } else {
+        counter.innerText = targetNumber;
+      }
+    }
+    updateCounter();
+
+    // Apply animation to the counter element
+    counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${index / counters.length + 0.5}s`;
+  });
+}
+
+// Function to continuously animate counters
+function animateCounters() {
+  updateCounterAndAnimate(); // Trigger animation initially
+
+  // Use setTimeout to continuously call the function after animation completes
+  setTimeout(() => {
+    animateCounters();
+  }, 3000); // Adjust the delay (in milliseconds) according to your animation timing
+}
+
+// Start the animation loop
+animateCounters();
+
+
 
 
 

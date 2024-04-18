@@ -10,12 +10,14 @@
 
 html{
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body{
-  width: 100%;
-
+  overflow-x: hidden;
 }
+
+
 .main-section {
   padding-inline: 60px;
   //height: 100%;
@@ -45,6 +47,7 @@ body{
   min-height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  
 }
 
 
@@ -232,16 +235,18 @@ a{
   }
   
 }
-h4{ 
-  font-family: "Montserrat", sans-serif;
-  font-size: 25px;
-  font-weight: 800;
-}
+
 
 
 .text{
   flex: 1;
   
+
+  h4{ 
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+  }
  
   
 h5{
@@ -280,11 +285,8 @@ button{
   min-height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  z-index: 4;
 
-  
-
-
- 
 }
 
 .parallax-image {
@@ -295,7 +297,7 @@ button{
   height: 80%;
   background-size: cover;
   background-position: center;
-  z-index: 1;
+  z-index: 1; 
 
   .parallax-text {
     position: absolute;
@@ -320,14 +322,19 @@ button{
 
 
 video{
-  margin: 180px;
+  padding-block: 40px;
   position: relative;
-  top: -650px;
+  top: 10px;
   width: 100%;
   scale: 0.6;
+  transform: translate(-0%, -50%);
+
+  
   
   
 }
+
+
 
 .what-we-do{
   height: 100%;
@@ -338,7 +345,7 @@ video{
   position: relative;
   justify-content: flex-end;
   //padding-bottom: 300px;
-  top: -900px;
+  top: -800px;
   //background-color: #E85CDA;
  
  

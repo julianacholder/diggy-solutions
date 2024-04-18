@@ -10,10 +10,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
-  width: 100%;
+  overflow-x: hidden;
 }
 
 .main-section {
@@ -179,13 +180,13 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-weight: 400;
 }
-.main-content .about-content h4 {
+.main-content .about-content .text {
+  flex: 1;
+}
+.main-content .about-content .text h4 {
   font-family: "Montserrat", sans-serif;
   font-size: 25px;
   font-weight: 800;
-}
-.main-content .about-content .text {
-  flex: 1;
 }
 .main-content .about-content .text h5 {
   font-family: "Courgette", sans-serif;
@@ -221,6 +222,7 @@ body {
   min-height: 500px;
   background-attachment: fixed;
   background-repeat: no-repeat;
+  z-index: 4;
 }
 .main-content .parallax-image {
   position: absolute;
@@ -251,11 +253,12 @@ body {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 .main-content video {
-  margin: 180px;
+  padding-block: 40px;
   position: relative;
-  top: -650px;
+  top: 10px;
   width: 100%;
   scale: 0.6;
+  transform: translate(0%, -50%);
 }
 .main-content .what-we-do {
   height: 100%;
@@ -263,7 +266,7 @@ body {
   display: flex;
   position: relative;
   justify-content: flex-end;
-  top: -900px;
+  top: -800px;
 }
 .main-content .what-we-do .what-components {
   display: flex;
