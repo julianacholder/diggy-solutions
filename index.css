@@ -336,8 +336,17 @@ body {
 }
 .main-content .numbers {
   display: flex;
-  gap: 130px;
+  flex-direction: row;
+  gap: 20px;
   padding-top: 60px;
+}
+.main-content .numbers .other-container1 {
+  display: flex;
+  gap: 50px;
+}
+.main-content .numbers .other-container2 {
+  display: flex;
+  gap: 50px;
 }
 .main-content .numbers .numbers-text {
   display: flex;
@@ -954,6 +963,12 @@ body {
     display: flex;
     flex-wrap: wrap;
   }
+  .main-content .numbers .other-container1 {
+    gap: 120px !important;
+  }
+  .main-content .numbers .other-container2 {
+    gap: 100px !important;
+  }
   .main-content .numbers .numbers-text {
     flex-direction: row;
   }
@@ -1001,6 +1016,15 @@ body {
   }
   .main-content .contact-us .contactus-content {
     gap: 50px;
+  }
+  .numbers {
+    gap: 10px;
+  }
+  .numbers .other-container1 {
+    gap: 20px !important;
+  }
+  .numbers .other-container2 {
+    gap: 20px !important;
   }
 }
 @media (max-width: 638px) {
@@ -1063,6 +1087,12 @@ body {
   .main-content .icons {
     scale: 0.6;
     gap: 18px;
+  }
+  .main-content .numbers .other-container1 {
+    gap: 20px !important;
+  }
+  .main-content .numbers .other-container2 {
+    gap: 20px !important;
   }
 }
 @media (max-width: 638px) {
