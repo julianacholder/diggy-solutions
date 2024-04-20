@@ -99,23 +99,22 @@ body{
 .hero-section {
   background: linear-gradient(#E85CDA, #11BBF1);
   min-height: 90vh;
-  display: flex;
-  justify-content: center;
+ 
 
-  //width:100%;
+ 
   
   
 .text-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   
   h2{
     font-family: "Bebas Neue", sans-serif;
     font-size: 180px;
     font-weight: 300;
-    margin:0 0 20px;
+    margin: 0;
   }
   //padding-top: 220px;
   //padding-right: 200px;
@@ -167,7 +166,7 @@ body{
     font-family: "Bebas Neue", sans-serif;
     font-size: 180px;
     font-weight: 300;
-    line-height: 190px;
+   // line-height: 190px;
    
 
     span{
@@ -179,12 +178,11 @@ body{
 a{
   text-decoration: none;
   color: black;
-  padding-top: 650px;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   letter-spacing: 5px;
   font-size: 18px;
-  padding-right: 90px;
+  padding-left: 70%;
  
 }
 
@@ -729,7 +727,18 @@ p{
   }
 }
 
+@media (max-width: 1900px) {
 
+  .main-section{
+    .hero-section{
+
+      a{
+      padding-top: 440px;
+      }
+      
+    }
+  }
+}
 
 @media (max-width: 1700px) {
 
@@ -737,7 +746,7 @@ p{
     .hero-section{
 
       .text-content{
-      padding-top: 50px;
+      padding-top: 60px;
       
     } 
     }
@@ -749,7 +758,7 @@ p{
     }
 
    video{
-    top: -400px;
+    top: 80px;
    }
    .what-we-do{
     top: -550px;
@@ -809,6 +818,21 @@ p{
 
 @media (max-width: 1470px) {
 
+  .main-section{
+    .hero-section{
+
+      .text-content{
+      h1{
+        font-size: 140px;
+      }
+      
+    } 
+    a{
+      padding-left: 60%;
+    }
+    }
+  }
+  
   .main-content{
     .about-content {
       padding-left: 200px; /* Reduce padding on smaller screens */
@@ -828,6 +852,10 @@ p{
       .contactus-content{
        gap: 80px;
       }
+     }
+
+     .what-we-do{
+      top: -430px;
      }
   }
   
@@ -862,6 +890,21 @@ p{
 
 @media (max-width: 1140px) {
 
+  .main-section{
+    .hero-section{
+
+      .text-content{
+      h1{
+        font-size: 120px;
+      }
+      
+    } 
+    a{
+      padding-left: 0%;
+    }
+    }
+  }
+
   .main-content{
     .about-content {
       display: flex;
@@ -887,7 +930,7 @@ p{
      position: relative;
 
      h1{
-      font-size: 130px;
+      font-size: 120px;
       line-height: 130px;
      }
 
@@ -921,14 +964,13 @@ p{
   .main-content{
 
   .what-we-do{
-    top: -250px;
+    top: -330px;
     padding-top: 40px;
 
     .what-components{
       width: 100% !important;
       min-height: 230px;
-      display: flex;
-      flex-wrap: wrap;
+     
       flex-shrink: 1;
       .component-container{
         flex-shrink: 1;
@@ -1052,6 +1094,25 @@ p{
 }
 }
 
+
+
+@media (max-width:440px) {
+  .main-content{
+ 
+    .what-we-do{
+      width: 100%;
+      .what-components{
+        width: 500px !important;
+        .component-container{
+         gap: 0 !important;
+         margin: 0 !important;
+         width: 1 !important;
+        }
+      }
+    }   
+}
+}
+
 @media (max-width: 900px) {
 
   .main-section{
@@ -1120,8 +1181,15 @@ p{
       }
 
      }
-
    
+     .what-we-do{
+      .what-components{
+      .component-container{
+       scale: 0.8 !important;
+      gap: 0px !important;
+      }
+      }
+    }
     
      
    }
@@ -1129,10 +1197,16 @@ p{
  }
 
  @media (max-width:580px) {
-
+ .main-section{
+  .hero-section{
+    h1{
+    line-height: 120px;
+    }
+  }
+ }
   .main-content{
     video{
-     top: -150px  !important;
+     
      scale: 0.9;
       
      }
@@ -1156,7 +1230,7 @@ p{
    }
 
    .what-we-do{
-    top: -60px;
+    top: -60px !important; 
    }
 
    
@@ -1205,27 +1279,36 @@ p{
 }
 
  @media (max-width: 850px) {
+
+  .main-section{
+    .hero-section{
+
+      .text-content{
+        text-align: center;
+      .matters{
+       // display: flex;
+        flex-direction: column;
+        gap: 0;
+       
+        
+      
+      }
+      
+    } 
+    }
+  }
   .main-content {
     video {
       scale: 0.9;
-      top: -300px;
+      top: 160px;
     }
 
     .what-we-do {
-      .what-components {
-        display: flex !important;
-        flex-wrap: wrap !important; /* Allow items to wrap onto multiple lines */
-       
-        /* Center the items horizontally */
-       // align-items: flex-start; /* Align items to the start of the cross axis */
-       flex-shrink: 1 !important;
-      }
-
+      top: -180px;
+     
       .component-container {
         padding-left: 0px !important;
        
-        gap: 60px !important;
-        flex-shrink: 1 !important; /* Allow items to shrink */
       }
     }
   .projections{
@@ -1266,7 +1349,21 @@ p{
   }
 }
 
-  
+@media (max-width: 700px) {
+
+  .main-content{
+    .what-we-do{
+      .what-components{
+        .component-container{
+         gap: 30px !important;
+          color: red;
+          
+         
+        }
+      }
+    }
+  }
+}
 
 
 @media (max-width: 1690px) {
@@ -1316,7 +1413,7 @@ p{
       .what-components{
         .component-container{
           padding-right: 0;
-          gap: 0px !important;
+          
          
         }
       }
@@ -1328,18 +1425,46 @@ p{
       
       
     }
+
+
   }
  
   
 }
 
 @media (max-width:470px) {
+
+  .main-section{
+    .hero-section{
+      .text-content{
+        h1{
+          font-size: 85px;
+          line-height: 90px;
+        }
+        a{
+          position: relative;
+          font-size: 14px;
+          top: 10px;
+           left: 0%;
+           transform: translate(-50%, -50%);
+
+
+          img{
+            width: 40px;
+            
+          }
+        }
+      }
+    }
+  }
   .main-content{
     .what-we-do{
+      top: 8px !important;
       .what-components{
+        width: 100%;
        .what-we-do-text{
         top: -70px;
-        left: 20px;
+       // left: 20px;
        }
         h1{
           font-size: 50px;
@@ -1347,10 +1472,15 @@ p{
           
         }
         .component-container{
-     position: relative;
-     right: 94px !important;
-        
-          scale: 0.6 !important;
+   
+          gap: 2px !important;
+        // scale: 0.8 !important;
+         
+          //padding-left: 5px !important;
+         
+         
+       
+         
           
          
         }
@@ -1392,13 +1522,18 @@ p{
   .main-content{
     .what-we-do{
       .what-components{
-        min-height: 100px;
+        min-height: 170px;
          
         
         .component-container{
-          padding-right: 0;
-          gap: 40px !important;
-          scale: 0.7;
+        
+         gap: 10px !important;
+          scale: 0.9;
+         // left: 0px;
+          position: absolute;
+         // align-items: center;
+          //justify-content: center;
+          right: 10px;
          
          
         }

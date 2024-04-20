@@ -85,20 +85,18 @@ body {
 .hero-section {
   background: linear-gradient(#E85CDA, #11BBF1);
   min-height: 90vh;
-  display: flex;
-  justify-content: center;
 }
 .hero-section .text-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 80px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .hero-section .text-content h2 {
   font-family: "Bebas Neue", sans-serif;
   font-size: 180px;
   font-weight: 300;
-  margin: 0 0 20px;
+  margin: 0;
 }
 .hero-section .text-content .matters {
   display: flex;
@@ -139,7 +137,6 @@ body {
   font-family: "Bebas Neue", sans-serif;
   font-size: 180px;
   font-weight: 300;
-  line-height: 190px;
 }
 .hero-section .text-content h1 span {
   color: #DFFC5C;
@@ -147,12 +144,11 @@ body {
 .hero-section a {
   text-decoration: none;
   color: black;
-  padding-top: 650px;
   font-family: "Roboto Condensed", sans-serif;
   font-weight: 600;
   letter-spacing: 5px;
   font-size: 18px;
-  padding-right: 90px;
+  padding-left: 70%;
 }
 
 .main-content {
@@ -589,15 +585,20 @@ body {
     right: 35px;
   }
 }
+@media (max-width: 1900px) {
+  .main-section .hero-section a {
+    padding-top: 440px;
+  }
+}
 @media (max-width: 1700px) {
   .main-section .hero-section .text-content {
-    padding-top: 50px;
+    padding-top: 60px;
   }
   .main-content .about-content {
     padding-left: 300px; /* Reduce padding on smaller screens */
   }
   .main-content video {
-    top: -400px;
+    top: 80px;
   }
   .main-content .what-we-do {
     top: -550px;
@@ -636,6 +637,12 @@ body {
   }
 }
 @media (max-width: 1470px) {
+  .main-section .hero-section .text-content h1 {
+    font-size: 140px;
+  }
+  .main-section .hero-section a {
+    padding-left: 60%;
+  }
   .main-content .about-content {
     padding-left: 200px; /* Reduce padding on smaller screens */
   }
@@ -648,6 +655,9 @@ body {
   }
   .main-content .contact-us .contactus-content {
     gap: 80px;
+  }
+  .main-content .what-we-do {
+    top: -430px;
   }
 }
 @media (max-width: 1150px) {
@@ -666,6 +676,12 @@ body {
   }
 }
 @media (max-width: 1140px) {
+  .main-section .hero-section .text-content h1 {
+    font-size: 120px;
+  }
+  .main-section .hero-section a {
+    padding-left: 0%;
+  }
   .main-content .about-content {
     display: flex;
     flex-direction: column;
@@ -683,7 +699,7 @@ body {
     position: relative;
   }
   .main-section .hero-section h1 {
-    font-size: 130px;
+    font-size: 120px;
     line-height: 130px;
   }
   .main-section .hero-section a {
@@ -706,14 +722,12 @@ body {
     scale: 0.6;
   }
   .main-content .what-we-do {
-    top: -250px;
+    top: -330px;
     padding-top: 40px;
   }
   .main-content .what-we-do .what-components {
     width: 100% !important;
     min-height: 230px;
-    display: flex;
-    flex-wrap: wrap;
     flex-shrink: 1;
   }
   .main-content .what-we-do .what-components .component-container {
@@ -803,6 +817,19 @@ body {
     font-size: 20px;
   }
 }
+@media (max-width: 440px) {
+  .main-content .what-we-do {
+    width: 100%;
+  }
+  .main-content .what-we-do .what-components {
+    width: 500px !important;
+  }
+  .main-content .what-we-do .what-components .component-container {
+    gap: 0 !important;
+    margin: 0 !important;
+    width: 1 !important;
+  }
+}
 @media (max-width: 900px) {
   .main-section .text-section .header {
     scale: 0.8;
@@ -841,10 +868,16 @@ body {
   .main-content .about-content .text .writing p {
     font-size: 18px;
   }
+  .main-content .what-we-do .what-components .component-container {
+    scale: 0.8 !important;
+    gap: 0px !important;
+  }
 }
 @media (max-width: 580px) {
+  .main-section .hero-section h1 {
+    line-height: 120px;
+  }
   .main-content video {
-    top: -150px !important;
     scale: 0.9;
   }
   .main-content .parallax-container {
@@ -860,7 +893,7 @@ body {
     font-size: 30px;
   }
   .main-content .what-we-do {
-    top: -60px;
+    top: -60px !important;
   }
   .main-content .projections-container {
     top: 70px;
@@ -897,20 +930,22 @@ body {
   }
 }
 @media (max-width: 850px) {
+  .main-section .hero-section .text-content {
+    text-align: center;
+  }
+  .main-section .hero-section .text-content .matters {
+    flex-direction: column;
+    gap: 0;
+  }
   .main-content video {
     scale: 0.9;
-    top: -300px;
+    top: 160px;
   }
-  .main-content .what-we-do .what-components {
-    display: flex !important;
-    flex-wrap: wrap !important; /* Allow items to wrap onto multiple lines */
-    /* Center the items horizontally */
-    flex-shrink: 1 !important;
+  .main-content .what-we-do {
+    top: -180px;
   }
   .main-content .what-we-do .component-container {
     padding-left: 0px !important;
-    gap: 60px !important;
-    flex-shrink: 1 !important; /* Allow items to shrink */
   }
   .main-content .projections p {
     padding-left: 50px;
@@ -941,6 +976,12 @@ body {
     font-size: 18px;
   }
 }
+@media (max-width: 700px) {
+  .main-content .what-we-do .what-components .component-container {
+    gap: 30px !important;
+    color: red;
+  }
+}
 @media (max-width: 1690px) {
   .main-content .what-we-do .what-components .component-container {
     gap: 120px;
@@ -965,7 +1006,6 @@ body {
 @media (max-width: 638px) {
   .main-content .what-we-do .what-components .component-container {
     padding-right: 0;
-    gap: 0px !important;
   }
   .main-content .footer {
     padding-left: 10px;
@@ -973,18 +1013,35 @@ body {
   }
 }
 @media (max-width: 470px) {
+  .main-section .hero-section .text-content h1 {
+    font-size: 85px;
+    line-height: 90px;
+  }
+  .main-section .hero-section .text-content a {
+    position: relative;
+    font-size: 14px;
+    top: 10px;
+    left: 0%;
+    transform: translate(-50%, -50%);
+  }
+  .main-section .hero-section .text-content a img {
+    width: 40px;
+  }
+  .main-content .what-we-do {
+    top: 8px !important;
+  }
+  .main-content .what-we-do .what-components {
+    width: 100%;
+  }
   .main-content .what-we-do .what-components .what-we-do-text {
     top: -70px;
-    left: 20px;
   }
   .main-content .what-we-do .what-components h1 {
     font-size: 50px;
     line-height: 40px;
   }
   .main-content .what-we-do .what-components .component-container {
-    position: relative;
-    right: 94px !important;
-    scale: 0.6 !important;
+    gap: 2px !important;
   }
   .main-content .our-projects .arrows {
     scale: 0.7;
@@ -1010,11 +1067,12 @@ body {
 }
 @media (max-width: 638px) {
   .main-content .what-we-do .what-components {
-    min-height: 100px;
+    min-height: 170px;
   }
   .main-content .what-we-do .what-components .component-container {
-    padding-right: 0;
-    gap: 40px !important;
-    scale: 0.7;
+    gap: 10px !important;
+    scale: 0.9;
+    position: absolute;
+    right: 10px;
   }
 }/*# sourceMappingURL=index.css.map */
