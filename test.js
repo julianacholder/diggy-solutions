@@ -66,7 +66,20 @@ function reveal() {
 
 window.addEventListener("scroll", reveal);
 
-let counters = document.querySelectorAll(".counter-item .counter");
+const countersContainer = document.getElementById("section_counter");
+let counters = countersContainer.querySelectorAll(".counter-item .counter");
+let isAnimationRunning = false;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting && !isAnimationRunning) {
+      isAnimationRunning = true;
+      animateCounters();
+    }
+  });
+}, { threshold: 0.5 }); // Adjust the threshold as needed
+
+observer.observe(countersContainer);
 
 // Function to update counter and apply animation
 function updateCounterAndAnimate() {
@@ -84,25 +97,17 @@ function updateCounterAndAnimate() {
       }
     }
     updateCounter();
-
     // Apply animation to the counter element
-    counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${index / counters.length + 0.5}s`;
+    counter.parentElement.style.animation = `slide-up 0.3s ease forwards ${
+      index / counters.length + 0.5
+    }s`;
   });
 }
 
-// Function to continuously animate counters
+// Function to animate counters
 function animateCounters() {
-  updateCounterAndAnimate(); // Trigger animation initially
-
-  // Use setTimeout to continuously call the function after animation completes
-  setTimeout(() => {
-    animateCounters();
-  }, 3000); // Adjust the delay (in milliseconds) according to your animation timing
+  updateCounterAndAnimate();
 }
-
-// Start the animation loop
-animateCounters();
-
 
 
 
